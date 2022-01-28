@@ -27,10 +27,9 @@ function removeStoreAtPosition(stores, index) {
  */
 function duplicateStore(store) {
   let secondStore = Object.assign({}, store);
-  //let secondStore = JSON.parse(JSON.sringify(store));
-   //store.a = 4;
-   //store.b.c = 4;
-  //let secondStore = stores.store;
+  secondStore.boardGames = Object.assign([], store.boardGames);
+  secondStore.address = Object.assign ( {}, store.address);
+   
   return secondStore
 }
 
